@@ -1,5 +1,4 @@
 #只忽略logs和reports文件夹内容，不忽略文件夹
-/out/logs/*
-!/out/logs
-/out/reports/*
-!/out/reports
+/out/*
+!/out/logs/
+!/out/reports/
