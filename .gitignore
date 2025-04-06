@@ -1,3 +1,4 @@
-testIgnore/111/*
-!testIgnore/111/
+/testIgnore/*
+
+
 
