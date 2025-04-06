@@ -1,5 +1,5 @@
 #只忽略logs和reports文件夹内容，不忽略文件夹
 out/logs/*
-!out/logs/.gitkeep
+!out/logs/
 out/reports/*
-!out/reports/.gitkeep
+!out/reports/
