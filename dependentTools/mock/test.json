@@ -1,0 +1,36 @@
+[ 
+{
+	"description":"1-登录",
+	"request":{
+		"uri":"/login",
+		"method":"POST",
+		"queries":{
+			"user_id":"y79112",
+			"password":"123"
+		}
+		},
+	"response":{
+		"text":"Hello,y79112"
+	}
+},
+
+{
+	"description":"2-查询订单接口",
+	"request":{
+		"uri":"/api/order/get_result/",
+		"method":"GET",
+		"queries":{
+					"order_id": "6666"
+				}
+		},
+	"response":{
+		"status":200,
+		"json":{
+					"user_id": "s001",
+					"goods_id": "123",
+					"num":1,
+					"amount":100.8
+			}
+	}
+}
+]
