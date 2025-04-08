@@ -4,8 +4,8 @@
 	"request":{
 		"uri":"/login",
 		"method":"POST",
-		"queries":{
-			"user_id":"y79112",
+		"forms":{
+			"username":"y79112",
 			"password":"123"
 		}
 		},
