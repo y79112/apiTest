@@ -10,7 +10,11 @@
 		}
 		},
 	"response":{
-		"text":"Hello,y79112"
+		"status":200,
+		"json":{
+			"text":"Hello,y79112",
+			"token":"pwd111"
+			}
 	}
 },
 

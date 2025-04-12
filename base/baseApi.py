@@ -34,6 +34,7 @@ class BaseApi:
             请求模块: {self.__class__.__name__}
             请求内容: {res.request.body}
             响应内容: {res.text}
+            响应状态: {res.status_code}
             ''')
             return res
         except Exception as e:

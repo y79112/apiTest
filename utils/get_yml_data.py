@@ -10,7 +10,7 @@ import yaml
 from utils.get_path import configs_path
 def get_yml_data(yml_file):
     # yml_file = os.path.join(configs_path, 'api_config.yml')
-    with open(yml_file, 'r') as f:
+    with open(yml_file, 'r',encoding='utf-8') as f:
         yml_data = yaml.safe_load(f.read())
     return yml_data
 

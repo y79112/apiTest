@@ -1,0 +1,7 @@
+testCaseFile: 测试用例.xls
+Login:
+  sheet_name: 登录
+  rows: ['3-6','1']
+  cols: ['测试标题','入参','预期结果']
+
+
