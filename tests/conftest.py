@@ -17,7 +17,16 @@ def start_end_test():
     print('测试结束。')
 
 
-@pytest.fixture(scope='module')
-def login_init(request):
+@pytest.fixture(scope='session')
+def login_init():
     login_obj = Login()
     yield login_obj
+
+
+def pytest_collection_modifyitems(config, items):
+    """修改收集到的测试项"""
+    for item in items:
+        # 处理节点ID中的Unicode字符
+        if isinstance(item.nodeid, str):
+            item._nodeid = item.nodeid.encode('utf-8').decode('unicode_escape')
+
