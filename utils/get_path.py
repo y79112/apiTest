@@ -13,6 +13,7 @@ pro_path=os.path.dirname(os.path.dirname(__file__))
 configs_path=os.path.join(pro_path,'configs\\')
 out_path=os.path.join(pro_path,'out\\')
 logs_path=os.path.join(out_path,'logs\\')
+reports_path=os.path.join(out_path,'reports\\')
 testCases_path=os.path.join(pro_path,'testCases\\')
 
 
