@@ -40,14 +40,17 @@ class BaseApi:
         except Exception as e:
             log.error(e)
 
-    def add(self):
-        pass
+    #增加
+    def add(self,**kwargs):
+        return self.base_send(**kwargs)
+    #删除
+    def delete(self,**kwargs):
+        return self.base_send(**kwargs)
 
-    def delete(self):
-        pass
+    #更新
+    def update(self,**kwargs):
+        return self.base_send(**kwargs)
 
-    def update(self):
-        pass
-
-    def query(self):
-        pass
+    #查询
+    def query(self,**kwargs):
+        return self.base_send(**kwargs)
