@@ -47,7 +47,7 @@ def get_excel_data(sheet_name,module_name):
    #实现选择用例功能
    #选择取哪几行用例
     if 'all' in row_sel:
-        row_list=rows[1:]
+        row_list=rows[1:] #排除第一行标题
     else:
         for row in row_sel:
             if '-' in row:
@@ -57,7 +57,7 @@ def get_excel_data(sheet_name,module_name):
             else:
                 row_list.append(f'{module_name.lower()}{int(row):03}')
 
-   #选择取哪几列值
+   #选择取哪几列编号
     for col in col_sel:
         col_list.append(cols.index(col))
 
