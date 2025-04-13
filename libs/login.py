@@ -10,11 +10,7 @@ from base.baseApi import BaseApi
 
 class Login(BaseApi):
 
-    def login(self, username, password):
-        data = {
-            'username': username,
-            'password': password
-        }
+    def login(self,data):
 
         res=self.base_send(data=data)
         return res
@@ -22,6 +18,13 @@ class Login(BaseApi):
 
 if __name__ == '__main__':
     login = Login()
-    res = login.login('y79112', '123')
-    print(res)
+    from utils.get_excel import get_excel_data
+    data = get_excel_data('登录','Login')
+
+    # res = login.login(data[0][1])
+    # res = login.login({'username':'y79112','password':'123'})
+
+    res=login.login(data[4][1])
+    print(res.status_code)
+    print(res.text)
 
