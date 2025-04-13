@@ -12,3 +12,4 @@
 - testCases 存放测试用例文件
 - docs 存放说明文档、接口文档等文档
 - dependentTools 存放依赖工具，如allure插件
+- issues 遇到的问题及解决方法
