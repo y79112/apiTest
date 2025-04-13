@@ -8,6 +8,13 @@ author: y79112
 import xlrd
 from utils.get_path import testCases_path,configs_path
 from utils.get_yml_data import get_yml_data
+import json
+
+def get_json_data(inData):
+    try:
+        return json.loads(inData) #要求表格中数据为json格式 如{"a":"1"},json转为Python数据
+    except:
+        return inData
 
 def get_excel_data(sheet_name,module_name):
     '''
@@ -64,7 +71,7 @@ def get_excel_data(sheet_name,module_name):
     for row in row_list:
         result_p=[] #中间列表
         for col in col_list:
-            result_p.append(sheet_list.cell(rows.index(row), col).value)
+            result_p.append(get_json_data(sheet_list.cell(rows.index(row), col).value))
 
         result_list.append(result_p)
 
