@@ -11,6 +11,6 @@ import pytest
 
 @pytest.fixture(scope='session',autouse=True)
 def start_end_test():
-    print('开始测试...')
+    print('\n开始测试...')
     yield
     print('测试结束。')
